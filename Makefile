@@ -3,11 +3,11 @@
 .SHELLFLAGS   := -eou pipefail
 
 .PHONY: build
-build: ## Build all packages
+build: ## Build package.
 	@go build .
 
 .PHONY: test
-test: ## Run tests for all packages.
+test: ## Run tests.
 	@go clean -testcache && go test -race ./...
 
 .PHONY: help
